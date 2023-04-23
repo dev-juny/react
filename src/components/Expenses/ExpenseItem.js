@@ -1,7 +1,8 @@
 import ExpenseDate from './ExpenseDate';
+import Card from '../UI/Card';
 import "./ExpenseItem.css";
 
-function ExpenseItem(props) {
+const ExpenseItem = (props) => {
 
 
     /** 여기 있는것은 실제로 HTML 이 아니고
@@ -10,13 +11,13 @@ function ExpenseItem(props) {
      * 그래서 class="" 가 아닌 className으로 사용한다.
      */
     return (
-        <div className="expense-item">
+        <Card className="expense-item">
             <ExpenseDate date={props.date} />
             <div className="expense-item__description">
                 <h2>{props.title}</h2>
                 <div className="expense-item__price">${props.amount}</div>
             </div>
-        </div>
+        </Card>
     );
 }
 
