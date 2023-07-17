@@ -1,15 +1,15 @@
+import React, { useState } from 'react';
+
 import ExpenseDate from './ExpenseDate';
 import Card from '../UI/Card';
 import "./ExpenseItem.css";
 
 const ExpenseItem = (props) => {
+    const [title, setTitle] = useState(props.title); //state 사용
+
     const clickHandler = () => {
-        title = 'Updated!';
-        console.log(title);
+        setTitle('Updated!')
     }
-
-    let title = props.title;
-
 
     /** 여기 있는것은 실제로 HTML 이 아니고
      * HTML처럼 보이기는 하지만 리액트 팀에서 만든 JSX구문이다.
