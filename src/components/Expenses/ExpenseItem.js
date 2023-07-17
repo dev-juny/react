@@ -3,6 +3,9 @@ import Card from '../UI/Card';
 import "./ExpenseItem.css";
 
 const ExpenseItem = (props) => {
+    const clickHandler = () => {
+        console.log("Clicked!!!")
+    }
 
 
     /** 여기 있는것은 실제로 HTML 이 아니고
@@ -17,6 +20,7 @@ const ExpenseItem = (props) => {
                 <h2>{props.title}</h2>
                 <div className="expense-item__price">${props.amount}</div>
             </div>
+            <button onClick={clickHandler}>Change Title</button>
         </Card>
     );
 }
