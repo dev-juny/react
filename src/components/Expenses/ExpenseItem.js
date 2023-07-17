@@ -6,9 +6,11 @@ import "./ExpenseItem.css";
 
 const ExpenseItem = (props) => {
     const [title, setTitle] = useState(props.title); //state 사용
+    console.log('ExpenseItem evaluate by React');
 
     const clickHandler = () => {
-        setTitle('Updated!')
+        setTitle('Updated!');
+        console.log(title);
     }
 
     /** 여기 있는것은 실제로 HTML 이 아니고
