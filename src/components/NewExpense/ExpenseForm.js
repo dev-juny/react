@@ -15,9 +15,14 @@ const ExpenseForm = () => {
 
     const titleChangeHandler = (event) => {
         // setEnteredTitle(event.target.value);
-        setUserInput({
-            ...userInput,
-            enteredTitle: event.target.value,
+        // setUserInput({
+        //     ...userInput,
+        //     enteredTitle: event.target.value,
+        // })
+
+        //39. 이전 State 에 의존하는 State Update 이전값을 덮어쓰기 위한 작업
+        setUserInput((prevState) => {
+            return { ...prevState, enteredTitle: event.target.value }
         })
     };
 
