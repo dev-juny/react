@@ -30,10 +30,17 @@ const App = () => {
     },
   ];
 
+
+  //42. 자식 -> 부모 컴포넌트 통신 (상향식)
+  const addExpenseHandler = expense => {
+    console.log('In App.js');
+    console.log(expense);
+  };
+
   //JSX 소스 자바스크립트 XML을 의미함
   return (
     <div>
-      <NewExpense />
+      <NewExpense onAddExpense={addExpenseHandler} />
       <Expenses items={expenses} />
     </div>
   );
