@@ -1,4 +1,8 @@
+import React from "react";
+
+import NewExpense from "./components/NewExpense/NewExpense";
 import Expenses from "./components/Expenses/Expenses";
+
 
 //App이라는 함수로 정의됨
 //무언가를 반환하는 함수, HTML을 반환함
@@ -29,7 +33,7 @@ const App = () => {
   //JSX 소스 자바스크립트 XML을 의미함
   return (
     <div>
-      <h2>Let's get started!</h2>
+      <NewExpense />
       <Expenses items={expenses} />
     </div>
   );
